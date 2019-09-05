@@ -1,18 +1,20 @@
-//
-//  ViewController.swift
-//  MAPD714-F2019-Lesson1
-//
-//  Created by Tom Tsiliopoulos on 2019-09-04.
-//  Copyright © 2019 CentennialCollege. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var HelloWorldLabel: UILabel!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func ClickMeButton(_ sender: UIButton)
+    {
+        HelloWorldLabel.text = (HelloWorldLabel.text == "Hello, World!") ? "Goodbye, World!" : "Hello, World!"
+    
     }
 
 
