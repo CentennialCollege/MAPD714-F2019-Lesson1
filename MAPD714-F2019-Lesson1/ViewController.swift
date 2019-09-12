@@ -9,13 +9,31 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
     }
     
-    @IBAction func ClickMeButton(_ sender: UIButton)
+    @IBAction func ButtonHandler(_ sender: UIButton)
     {
-        HelloWorldLabel.text = (HelloWorldLabel.text == "Hello, World!") ? "Goodbye, World!" : "Hello, World!"
+        switch (sender.titleLabel?.text)
+        {
+        case "Hello!":
+            HelloWorldLabel.text = "Hello!"
+            break
+        case "Good Bye!":
+            HelloWorldLabel.text = "Good bye!"
+            break
+        default:
+            HelloWorldLabel.text = "Something happened..."
+            break
+        }
+        
     
     }
+    
+  
+    
+    
+ 
 
 
 }
